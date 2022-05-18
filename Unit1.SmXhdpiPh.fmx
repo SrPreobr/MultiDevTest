@@ -1,0 +1,85 @@
+inherited Form1_SmXhdpiPh: TForm1_SmXhdpiPh
+  ClientHeight = 375
+  ClientWidth = 250
+  DesignerMasterStyle = 3
+  inherited GroupBox2: TGroupBox
+    Size.Width = 250.000000000000000000
+    Size.Height = 375.000000000000000000
+    inherited TabControl1: TTabControl
+      Size.Width = 240.000000000000000000
+      Size.Height = 365.000000000000000000
+      Sizes = (
+        240s
+        316s
+        240s
+        316s
+        240s
+        316s
+        240s
+        316s)
+      inherited TabItem1: TTabItem
+        TextSettings.Font.Size = 10.000000000000000000
+        Size.Width = 60.000000000000000000
+        ExplicitSize.cx = 69.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
+        inherited GroupBox1: TGroupBox
+          Size.Width = 240.000000000000000000
+        end
+        inherited StringGridTovar: TStringGrid
+          Size.Width = 240.000000000000000000
+          Size.Height = 283.000000000000000000
+          Viewport.Width = 240.000000000000000000
+          Viewport.Height = 283.000000000000000000
+        end
+      end
+      inherited TabItem2: TTabItem
+        TextSettings.Font.Size = 10.000000000000000000
+        Size.Width = 60.000000000000000000
+        ExplicitSize.cx = 70.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
+        inherited GroupBox3: TGroupBox
+          Size.Width = 240.000000000000000000
+        end
+        inherited StringGridNakl: TStringGrid
+          Size.Width = 240.000000000000000000
+          Size.Height = 283.000000000000000000
+          Viewport.Width = 240.000000000000000000
+          Viewport.Height = 283.000000000000000000
+        end
+      end
+      inherited TabItem4: TTabItem
+        TextSettings.Font.Size = 10.000000000000000000
+        Size.Width = 60.000000000000000000
+        ExplicitSize.cx = 64.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
+        inherited StringGridRecNakl: TStringGrid
+          Size.Width = 240.000000000000000000
+          Size.Height = 283.000000000000000000
+          Viewport.Width = 240.000000000000000000
+          Viewport.Height = 283.000000000000000000
+        end
+        inherited GroupBox6: TGroupBox
+          Size.Width = 240.000000000000000000
+          inherited Label2: TLabel
+            Size.Width = 240.000000000000000000
+          end
+        end
+      end
+      inherited TabItem3: TTabItem
+        TextSettings.Font.Size = 10.000000000000000000
+        Size.Width = 60.000000000000000000
+        ExplicitSize.cx = 34.000000000000000000
+        ExplicitSize.cy = 18.000000000000000000
+        inherited GroupBox4: TGroupBox
+          Size.Width = 240.000000000000000000
+        end
+        inherited StringGridZakup: TStringGrid
+          Size.Width = 240.000000000000000000
+          Size.Height = 283.000000000000000000
+          Viewport.Width = 240.000000000000000000
+          Viewport.Height = 283.000000000000000000
+        end
+      end
+    end
+  end
+end

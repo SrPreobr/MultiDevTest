@@ -1,0 +1,326 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = #1058#1086#1074#1072#1088
+  ClientHeight = 501
+  ClientWidth = 320
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnActivate = FormActivate
+  Touch.GestureManager = GestureManager1
+  Touch.InteractiveGestures = [Zoom]
+  DesignerMasterStyle = 3
+  object GroupBox2: TGroupBox
+    Align = Client
+    Padding.Left = 5.000000000000000000
+    Padding.Top = 5.000000000000000000
+    Padding.Right = 5.000000000000000000
+    Padding.Bottom = 5.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 501.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'groupboxstyle'
+    TabOrder = 0
+    object TabControl1: TTabControl
+      Align = Client
+      Size.Width = 310.000000000000000000
+      Size.Height = 491.000000000000000000
+      Size.PlatformDefault = False
+      TabHeight = 49.000000000000000000
+      TabIndex = 0
+      TabOrder = 1
+      TabPosition = PlatformDefault
+      OnChange = TabControl1Change
+      Sizes = (
+        310s
+        442s
+        310s
+        442s
+        310s
+        442s
+        310s
+        442s)
+      object TabItem1: TTabItem
+        CustomIcon = <
+          item
+          end>
+        StyledSettings = [Family, Style, FontColor]
+        IsSelected = True
+        Size.Width = 77.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = #1058#1086#1074#1072#1088
+        ExplicitSize.cx = 69.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
+        object GroupBox1: TGroupBox
+          Align = Top
+          Size.Width = 310.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object ComboBoxProizv: TComboBox
+            Position.X = 9.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 150.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            OnChange = ComboBoxChangeTovar
+          end
+          object ComboBoxAgent: TComboBox
+            Position.X = 162.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 150.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            OnChange = ComboBoxChangeTovar
+          end
+        end
+        object StringGridTovar: TStringGrid
+          Touch.GestureManager = GestureManager1
+          Touch.InteractiveGestures = [Zoom]
+          OnGesture = FormGesture
+          Align = Client
+          CanFocus = True
+          ClipChildren = True
+          Size.Width = 310.000000000000000000
+          Size.Height = 409.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          RowHeight = 21.000000000000000000
+          RowCount = 0
+          Options = [ColumnResize, ColumnMove, ColLines, RowLines, Tabs, Header, HeaderClick, AutoDisplacement]
+          Viewport.Width = 310.000000000000000000
+          Viewport.Height = 377.000000000000000000
+        end
+      end
+      object TabItem2: TTabItem
+        CustomIcon = <
+          item
+          end>
+        StyledSettings = [Family, Style, FontColor]
+        IsSelected = False
+        Size.Width = 77.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = #1053#1072#1082#1083
+        ExplicitSize.cx = 70.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
+        object GroupBox3: TGroupBox
+          Align = Top
+          Size.Width = 310.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object ComboBoxAgentFrom: TComboBox
+            Position.X = 162.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 150.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            OnChange = ComboBoxChangeNakl
+          end
+          object ComboBoxAgentTo: TComboBox
+            Position.X = 162.000000000000000000
+            Position.Y = 27.000000000000000000
+            Size.Width = 150.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Visible = False
+            OnChange = ComboBoxChangeNakl
+          end
+          object Label1: TLabel
+            StyledSettings = [Family, Style, FontColor]
+            Position.X = 63.000000000000000000
+            Position.Y = 8.000000000000000000
+            TextSettings.Font.Size = 8.000000000000000000
+            Text = #1058#1080#1087' '#1044#1086#1082'-'#1090#1072' ->'
+            Visible = False
+          end
+          object ComboBoxNaklName: TComboBox
+            Position.X = 9.000000000000000000
+            Position.Y = 4.000000000000000000
+            Size.Width = 150.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 3
+            OnChange = ComboBoxChangeNakl
+          end
+        end
+        object StringGridNakl: TStringGrid
+          Touch.GestureManager = GestureManager1
+          Touch.InteractiveGestures = [Zoom, LongTap, DoubleTap]
+          OnGesture = FormGesture
+          Align = Client
+          CanFocus = True
+          ClipChildren = True
+          Size.Width = 310.000000000000000000
+          Size.Height = 409.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          RowHeight = 21.000000000000000000
+          Options = [ColumnResize, ColumnMove, ColLines, RowLines, Tabs, Header, HeaderClick, AutoDisplacement]
+          Viewport.Width = 310.000000000000000000
+          Viewport.Height = 377.000000000000000000
+        end
+      end
+      object TabItem4: TTabItem
+        Touch.InteractiveGestures = [Zoom]
+        CustomIcon = <
+          item
+          end>
+        StyledSettings = [Family, Style, FontColor]
+        IsSelected = False
+        Size.Width = 77.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = #1057#1086#1076#1053#1072#1082#1083
+        ExplicitSize.cx = 80.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
+        object StringGridRecNakl: TStringGrid
+          Align = Client
+          CanFocus = True
+          ClipChildren = True
+          Size.Width = 310.000000000000000000
+          Size.Height = 409.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          RowHeight = 21.000000000000000000
+          Options = [ColumnResize, ColumnMove, ColLines, RowLines, Tabs, Header, HeaderClick, AutoDisplacement]
+          Viewport.Width = 310.000000000000000000
+          Viewport.Height = 377.000000000000000000
+        end
+        object GroupBox6: TGroupBox
+          Align = Top
+          Size.Width = 310.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object Label2: TLabel
+            Align = Client
+            Size.Width = 310.000000000000000000
+            Size.Height = 33.000000000000000000
+            Size.PlatformDefault = False
+            Text = #8470
+          end
+        end
+      end
+      object TabItem3: TTabItem
+        CustomIcon = <
+          item
+          end>
+        StyledSettings = [Family, Style, FontColor]
+        IsSelected = False
+        Size.Width = 79.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = #1047#1072#1082#1091#1087
+        ExplicitSize.cx = 34.000000000000000000
+        ExplicitSize.cy = 18.000000000000000000
+        object GroupBox4: TGroupBox
+          Align = Top
+          Size.Width = 310.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object ComboBoxAgentZakup: TComboBox
+            Position.X = 9.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 150.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            OnChange = ComboBoxAgentZakupChange
+          end
+        end
+        object StringGridZakup: TStringGrid
+          Touch.GestureManager = GestureManager1
+          Touch.InteractiveGestures = [Zoom]
+          OnGesture = FormGesture
+          Align = Client
+          CanFocus = True
+          ClipChildren = True
+          Size.Width = 310.000000000000000000
+          Size.Height = 409.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          RowHeight = 21.000000000000000000
+          Options = [ColumnResize, ColumnMove, ColLines, RowLines, Tabs, Header, HeaderClick, AutoDisplacement]
+          Viewport.Width = 310.000000000000000000
+          Viewport.Height = 377.000000000000000000
+        end
+      end
+    end
+  end
+  object GestureManager1: TGestureManager
+    Sensitivity = 80.000000000000000000
+    Left = 81
+    Top = 113
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DM.FDQueryNakl
+    ScopeMappings = <>
+    Left = 36
+    Top = 232
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 38
+    Top = 181
+    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      GridControl = StringGridNakl
+      Columns = <>
+    end
+    object LinkGridToDataSourceBindSourceDB3: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB3
+      GridControl = StringGridZakup
+      Columns = <>
+    end
+    object LinkGridToDataSourceBindSourceDB4: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB4
+      GridControl = StringGridRecNakl
+      Columns = <>
+    end
+    object lnkgrdtdtsrcBindSourceDB: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      GridControl = StringGridTovar
+      Columns = <>
+    end
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = DM.FDQueryTovar
+    ScopeMappings = <>
+    Left = 36
+    Top = 288
+  end
+  object BindSourceDB3: TBindSourceDB
+    DataSet = DM.FDQueryZakup
+    ScopeMappings = <>
+    Left = 36
+    Top = 352
+  end
+  object BindSourceDB4: TBindSourceDB
+    DataSet = DM.FDQueryRecNakl
+    ScopeMappings = <>
+    Left = 27
+    Top = 416
+  end
+end
