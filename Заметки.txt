@@ -1,0 +1,64 @@
+Проект D:\Preobr\Android\MultiDevTest\ProjectMuDeTest.dproj
+
+1.
+Syntax Check  дает ошибку. Надо завершить антивирус Comodo и убить процесс CmdAgent, тогда Ок.
+
+[Exec Error] The command 
+"PATH C:\Program Files (x86)\Java\jdk1.7.0_80\bin;
+      C:\Users\Public\Documents\Embarcadero\InterBase\redist\InterBaseXE7\IDE_spoof;
+      C:\Program Files (x86)\Embarcadero\Studio\17.0\PlatformSDKs\android-sdk-windows\platform-tools;
+      C:\Program Files (x86)\Embarcadero\Studio\17.0\PlatformSDKs\android-sdk-windows\tools;
+      C:\Users\Public\Documents\Embarcadero\Studio\17.0\Bpl;D:\Preobr\Delphi\Studio\17.0\bin64;
+      C:\Users\Public\Documents\Embarcadero\Studio\17.0\Bpl\Win64;C:\ProgramData\Oracle\Java\javapath;
+      C:\Program Files (x86)\Intel\iCLS Client\;
+      C:\Program Files\Intel\iCLS Client\;
+      C:\Program Files (x86)\PC Connectivity Solution\;
+      C:\Program Files (x86)\Borland\Delphi7\Bin;
+      C:\Program Files (x86)\Borland\Delphi7\Projects\Bpl\;
+      C:\Windows\system32;
+      C:\Windows;
+      C:\Windows\System32\Wbem;
+      C:\Windows\System32\WindowsPowerShell\v1.0\;
+      C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;
+      C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;
+      C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;
+      C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;
+      C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;
+      C:\Program Files (x86)\Skype\Phone\ & 
+     "C:\Program Files (x86)\Embarcadero\Studio\17.0\PlatformSDKs\android-sdk-windows\build-tools\23.0.1\dx.bat" --dex --output="D:\Preobr\Android\MultiDevTest\Android\Debug\classes.dex" 
+     "c:\program files (x86)\embarcadero\studio\17.0\lib\Android\Debug\android-support-v4.dex.jar" 
+     "c:\program files (x86)\embarcadero\studio\17.0\lib\Android\Debug\apk-expansion.dex.jar" 
+     "c:\program files (x86)\embarcadero\studio\17.0\lib\Android\Debug\cloud-messaging.dex.jar" 
+     "c:\program files (x86)\embarcadero\studio\17.0\lib\Android\Debug\fmx.dex.jar" 
+     "c:\program files (x86)\embarcadero\studio\17.0\lib\Android\Debug\google-analytics-v2.dex.jar" 
+     "c:\program files (x86)\embarcadero\studio\17.0\lib\Android\Debug\google-play-billing.dex.jar" 
+     "c:\program files (x86)\embarcadero\studio\17.0\lib\Android\Debug\google-play-licensing.dex.jar" 
+     "c:\program files (x86)\embarcadero\studio\17.0\lib\Android\Debug\google-play-services.dex.jar" "
+ exited with code 1.
+
+Ошибка пропала после удаления Комодо
+
+После выключения Комодо, ошибка остается
+Но если завершить процесс CMDAgent? то пропадает.
+
+2.
+При Build не создает файл apk. для создания apk - команда Run
+При Run создает файл apk в папке = имя_проекта\bin
+ Но при этом надо предварительно удалить предыдущий apk.
+
+3.
+  FDConnection1.Params.Values['Database'] :=
+    System.IOUtils.TPath.GetPublicPath+System.SysUtils.PathDelim + 'Test.s3db';
+ // если присваивать после обновления БД, то программа потом БД не открывает вообще
+
+Обновление базы=procedure TDM.FDConnection1BeforeConnect(Sender: TObject);
+
+проблема описана https://overcoder.net/q/638418/%D0%B8%D0%BC%D0%BF%D0%BE%D1%80%D1%82-%D0%B8-%D1%8D%D0%BA%D1%81%D0%BF%D0%BE%D1%80%D1%82-%D0%B1%D0%B0%D0%B7%D1%8B-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-%D0%BD%D0%B5-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D1%82-%D0%B2-android-pie
+
+4. при переходе на новую версию JDK
+Tools-Options-Deployment-SDK Manager-Java обновить пути
+отредактировать перменную среды
+
+если пренастроить все на c:\Program Files\Java\jdk-13.0.1\, после перезапуска Delphi 10.3 возникает ошибка компиляции
+возвращаешь на c:\Program Files (x86)\Java\jdk1.8.0_192\ = ошибка пропадает
+

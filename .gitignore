@@ -1,0 +1,6 @@
+*.exe
+Android/
+__history/
+__recovery/
+ModelSupport_ProjectMuDeTest/
+Win32/
